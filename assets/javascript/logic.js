@@ -1,9 +1,9 @@
-var topics = ["Rainbow", "cat", "LOL"]
+var topics = ["Nerds", "Hack", "Everything"]
 
 function displayGif() {
     var search = $(this).attr("data-search");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-      search + "&api_key=p1UosfDNRC8b4YXyXpenGlggwdDADNh5&limit=10";
+      search + "&api_key=p1UosfDNRC8b4YXyXpenGlggwdDADNh5&limit=10&offset=0";
 
     $.ajax({
       url: queryURL,
@@ -51,7 +51,7 @@ function renderButtons() {
 
     for (var i = 0; i < topics.length; i++) {
       var btn = $("<button>");
-      btn.addClass("gifBtn").attr("data-search", topics[i]).text(topics[i]);
+      btn.addClass("gifBtn btn btn-primary").attr("data-search", topics[i]).text(topics[i]);
       $("#buttons-view").append(btn);
     }
 }
@@ -62,6 +62,7 @@ $("#searchBtn").on("click", function(event) {
     topics.push(gif);
 
     renderButtons();
+    $("#gifInputForm")[0].reset();
 });
 
 $(document).on("click", ".gifBtn", displayGif);

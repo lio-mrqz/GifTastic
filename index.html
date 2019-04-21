@@ -11,28 +11,27 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="assets/CSS/style.css">
+
     <title>GifTastic</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <iframe src="https://giphy.com/embed/54Ya3l8S8y1ggAlzTA"  frameBorder="0" style="pointer-events: none" class="giphy-embed" allowfullscreen></iframe>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
-                <button data-search="jack sparrow">
-                    Wherever we want to go, we'll go
-                </button>
+            <div class="col-lg-6 col-sm-6">
                 <div id="buttons-view"></div>
                 <br>
-                <form id="movie-form">
+                <form id="gifInputForm">
                     <label for="gifInput">GIF Search</label>
                     <input type="text" id="gifInput">
                     <br>
                 
                     <!-- Button triggers new movie to be added -->
-                    <input id="searchBtn" type="submit" value="Search">
+                    <input id="searchBtn" class="btn btn-primary" type="submit" value="Search">
                 </form>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6">
                 <div id="gifsResults"></div>
             </div>
         </div>
